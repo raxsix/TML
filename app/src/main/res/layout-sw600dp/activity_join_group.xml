@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="600dp"
+    android:layout_width="@dimen/join_group_activity_width"
     android:gravity="center_vertical"
     android:layout_gravity="center"
     android:orientation="vertical"
@@ -21,7 +21,7 @@
         android:id="@+id/fieldName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/join_group_edit_text_margin"
         android:hint="@string/FieldName"
         android:contentDescription="@string/FieldName"
         android:inputType="textEmailAddress" />
@@ -30,7 +30,7 @@
         android:id="@+id/joinPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/join_group_edit_text_margin"
         android:contentDescription="@string/password"
         android:fontFamily="sans-serif"
         android:hint="@string/password"
@@ -40,11 +40,11 @@
     <Button
         android:id="@+id/buttonJoin"
         android:layout_width="match_parent"
-        android:layout_margin="30dp"
-        android:layout_height="100dp"
+        android:layout_margin="@dimen/join_group_edit_text_margin"
+        android:layout_height="@dimen/join_group_button_height"
         android:contentDescription="@string/join_group"
         android:text="Join"
-        android:textSize="20sp" />
+        android:textSize="@dimen/join_group_button_sp" />
 
 
 </LinearLayout>

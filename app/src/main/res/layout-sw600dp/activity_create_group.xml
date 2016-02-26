@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="600dp"
+    android:layout_width="@dimen/create_group_activity_width"
     android:gravity="center_vertical"
     android:layout_gravity="center"
     android:orientation="vertical"
@@ -11,7 +11,7 @@
         android:id="@+id/groupName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/create_group_edit_text_margin"
         android:hint="@string/group_name"
         android:contentDescription="@string/group_name"
         android:inputType="textEmailAddress" />
@@ -20,7 +20,7 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/create_group_edit_text_margin"
         android:fontFamily="sans-serif"
         android:hint="@string/password"
         android:contentDescription="@string/password"
@@ -30,7 +30,7 @@
         android:id="@+id/fieldName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/create_group_edit_text_margin"
         android:hint="@string/FieldName"
         android:contentDescription="@string/FieldName"
         android:inputType="textEmailAddress" />
@@ -38,10 +38,10 @@
     <Button
         android:id="@+id/buttonCreateGroup"
         android:layout_width="match_parent"
-        android:layout_margin="30dp"
-        android:layout_height="100dp"
+        android:layout_margin="@dimen/create_group_button_margin"
+        android:layout_height="@dimen/create_group_button_height"
         android:text="Create"
         android:contentDescription="@string/create_group"
-        android:textSize="20sp" />
+        android:textSize="@dimen/create_group_button_sp" />
 
 </LinearLayout>

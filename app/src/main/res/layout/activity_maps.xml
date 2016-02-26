@@ -9,20 +9,18 @@
     <FrameLayout
         android:id="@+id/map_touch_layer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/btn_group_list"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:background="#B3FFFFFF"
-        android:paddingTop="6dp"
+        android:layout_width="@dimen/map_list_button_width"
+        android:layout_height="@dimen/map_list_button_width"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="@dimen/map_list_button_margin_right"
+        android:layout_marginTop="@dimen/map_list_button_margin_top"
+        android:background="@color/map_button_background"
         android:contentDescription="@string/user_list"
         android:drawableTop="@drawable/ic_group"
-        android:layout_gravity="right|top"
-        android:layout_marginTop="55dp"
-        android:layout_marginRight="11dp" />
-
-
+        android:paddingTop="@dimen/map_list_button_padding" />
 
 </fragment>

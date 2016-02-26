@@ -4,8 +4,8 @@ android {
     signingConfigs {
         release {
             keyAlias 'tml'
-            storePassword System.getenv("KSTOREPWD")
-            keyPassword System.getenv("KEYPWD")
+            storePassword 'TeamMate'
+            keyPassword 'TeamMate'
             storeFile file('TML_signed_apk.jks')
         }
     }

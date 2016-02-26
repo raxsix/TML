@@ -2,33 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="100dp"
-    android:layout_marginRight="100dp"
-    android:layout_marginTop="150dp"
-    android:layout_marginBottom="150dp"
+    android:layout_marginLeft="@dimen/port_activity_margin_left"
+    android:layout_marginRight="@dimen/port_activity_margin_right"
+    android:layout_marginTop="@dimen/port_activity_margin_top"
+    android:layout_marginBottom="@dimen/port_activity_margin_bottom"
     android:orientation="vertical">
 
 
     <Button
         android:id="@+id/buttonCreate"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/button_height"
         android:layout_weight="1"
         android:background="@color/colorAccent"
         android:onClick="create"
         android:text="@string/create_group"
         android:contentDescription="@string/create_group"
-        android:textSize="50sp" />
+        android:textSize="@dimen/sw600dp_button_text" />
 
     <Button
         android:id="@+id/buttonJoin"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/sw600dp_join_button_margin_top"
         android:layout_weight="1"
         android:onClick="join"
         android:text="@string/join_group"
         android:contentDescription="@string/join_group"
-        android:textSize="50sp" />
+        android:textSize="@dimen/sw600dp_button_text" />
 
 </LinearLayout>

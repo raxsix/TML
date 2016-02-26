@@ -2,5 +2,55 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin_right">34dp</dimen>
+    <dimen name="fab_margin_end">34dp</dimen>
+    <dimen name="fab_margin_bottom">35dp</dimen>
+
+
+    <!-- Main Activity -->
+    <dimen name="button_height">0dp</dimen>
+    <dimen name="button_margin">2dp</dimen>
+    <dimen name="button_text">40sp</dimen>
+
+    <!-- Main Activity sw600dp-land-->
+    <dimen name="activity_margin_left">300dp</dimen>
+    <dimen name="activity_margin_right">300dp</dimen>
+    <dimen name="activity_margin_top">50dp</dimen>
+    <dimen name="activity_margin_bottom">50dp</dimen>
+    <dimen name="sw600dp_button_height">0dp</dimen>
+    <dimen name="sw600dp_button_margin">2dp</dimen>
+    <dimen name="sw600dp_button_text">50sp</dimen>
+    <dimen name="sw600dp_join_button_margin_top">10dp</dimen>
+
+    <!-- Main Activity sw600dp-port-->
+    <dimen name="port_activity_margin_left">100dp</dimen>
+    <dimen name="port_activity_margin_right">100dp</dimen>
+    <dimen name="port_activity_margin_top">150dp</dimen>
+    <dimen name="port_activity_margin_bottom">150dp</dimen>
+
+    <!-- Create group Activity -->
+    <dimen name="create_group_activity_margin_top">30dp</dimen>
+    <dimen name="create_group_activity_width">600dp</dimen>
+    <dimen name="create_group_edit_text_margin">30dp</dimen>
+    <dimen name="create_group_button_margin">30dp</dimen>
+    <dimen name="create_group_button_sp">20sp</dimen>
+    <dimen name="create_group_button_height">100dp</dimen>
+
+    <!-- Join group Activity -->
+    <dimen name="join_group_activity_margin_top">30dp</dimen>
+    <dimen name="join_group_activity_width">600dp</dimen>
+    <dimen name="join_group_edit_text_margin">30dp</dimen>
+    <dimen name="join_group_button_margin">30dp</dimen>
+    <dimen name="join_group_button_sp">20sp</dimen>
+    <dimen name="join_group_button_height">100dp</dimen>
+
+    <!-- Custom map button -->
+    <dimen name="map_list_button_width">38dp</dimen>
+    <dimen name="map_list_button_height">38dp</dimen>
+    <dimen name="map_list_button_padding">6dp</dimen>
+    <dimen name="map_list_button_margin_top">55dp</dimen>
+    <dimen name="map_list_button_margin_right">11dp</dimen>
+
+
+
 </resources>
