@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <EditTextPreference
+        android:inputType="text"
+        android:key="@string/pref_user_field_name_key"
+        android:singleLine="true"
+        android:title="@string/pref_user_field_name_label" />
+
+    <EditTextPreference
+        android:inputType="text"
+        android:key="@string/pref_group_name_key"
+        android:singleLine="true"
+        android:title="@string/pref_group_name_label" />
+
+</PreferenceScreen>

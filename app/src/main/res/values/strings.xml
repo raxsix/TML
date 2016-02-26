@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">TeamMate Locator</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="create_group">Create group</string>
+    <string name="join_group">Join group</string>
+    <string name="network_not_available">Network not available</string>
+    <string name="pref_user_field_name_key" translatable="false">fieldname</string>
+    <string name="pref_user_id" translatable="false">id</string>
+    <string name="pref_user_field_name_label">Field name</string>
+    <string name="action_settings">Settings</string>
+    <string name="group_name">Group name</string>
+    <string name="password">Password</string>
+    <string name="FieldName">Field name</string>
+    <string name="dialog_loading_text">Loading</string>
+    <string name="error_invalid_field_name">Max 8 character</string>
+    <string name="error_invalid_group_name">Max 25 character</string>
+    <string name="pref_group_name_key">group</string>
+    <string name="pref_group_name_label">Group name</string>
+    <string name="empty_list">No rooms created!</string>
+    <string name="google_maps_connection_failed">Connection failed</string>
+    <string name="connection_dropped">Connection_dropped!</string>
+    <string name="reconnecting">Reconnecting</string>
+    <string name="socket_disconnected">Disconnected!</string>
+    <string name="shared_preference_key">eu.raxsix.tml.uuid!</string>
+    <string name="server_error_nr_1">Server error #1</string>
+    <string name="list_refreshed">List refreshed</string>
+    <string name="refresh_list">Refresh the list</string>
+    <string name="action">Action</string>
+    <string name="joined">joined</string>
+    <string name="list">list</string>
+    <string name="location_update_active">"Location update is active"</string>
+    <string name="location_update_inactive">"Location update is inactive"</string>
+    <string name="user_list">users in the room</string>
+    <string name="users_joined_the_room">" users joined the room"</string>
+    <string name="joined_the_room">" joined the room"</string>
+    <string name="user">"User "</string>
+    <string name="has_left">" has left "</string>
+    <string name="users_left_the_room">" users left the room"</string>
+    <string name="left_the_room">" left the room"</string>
+    <string name="users_in_this_room">Users in this room(</string>
+    <string name="cancel">cancel</string>
+    <string name="reload">reload</string>
+    <string name="is_a_web_user">" is a web user"</string>
+    <string name="gps_network_not_enabled">GPS not available</string>
+    <string name="open_location_settings">Enable GPS</string>
+</resources>
