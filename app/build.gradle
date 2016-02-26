@@ -6,7 +6,7 @@ android {
             keyAlias 'tml'
             storePassword 'TeamMate'
             keyPassword 'TeamMate'
-            storeFile file('TML_signed_apk.jks')
+            storeFile file('tml_keystore.jks')
         }
     }
     compileSdkVersion 23
