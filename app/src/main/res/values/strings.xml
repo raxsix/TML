@@ -26,7 +26,7 @@
     <string name="list_refreshed">List refreshed</string>
     <string name="refresh_list">Refresh the list</string>
     <string name="action">Action</string>
-    <string name="joined">joined </string>
+    <string name="joined"> joined </string>
     <string name="list">list</string>
     <string name="location_update_active">"Location update is active"</string>
     <string name="location_update_inactive">"Location update is inactive"</string>
@@ -43,4 +43,5 @@
     <string name="is_a_web_user">" is a web user"</string>
     <string name="gps_network_not_enabled">GPS not available</string>
     <string name="open_location_settings">Enable GPS</string>
+    <string name="inactive">INACTIVE</string>
 </resources>

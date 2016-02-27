@@ -19,6 +19,9 @@ public class AppConfig {
     public static String EXTRA_ROOM_ID = "room";
     public static String EXTRA_USER_ID = "userID";
     public static String EXTRA_ROOM_NAME = "roomName";
+    public static String EXTRA_ROOM_COUNT = "count";
+    public static String EXTRA_USER_LIST = "userList";
+
 
     // SharedPreferences
     public static String PREF_FILE_NAME = "MyData";

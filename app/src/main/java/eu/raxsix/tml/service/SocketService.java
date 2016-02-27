@@ -2,12 +2,16 @@ package eu.raxsix.tml.service;
 
 import android.app.NotificationManager;
 import android.app.Service;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -16,9 +20,15 @@ import com.google.android.gms.location.LocationServices;
 import org.json.JSONObject;
 
 import java.net.URISyntaxException;
+import java.util.HashMap;
 
+import eu.raxsix.tml.MapsActivity;
+import eu.raxsix.tml.R;
 import eu.raxsix.tml.application.AppConfig;
+import eu.raxsix.tml.database.TmlContract;
+import eu.raxsix.tml.database.TmlDbHelper;
 import eu.raxsix.tml.network.Network;
+import eu.raxsix.tml.widget.TmlWidgetProvider;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 
@@ -71,6 +81,7 @@ public class SocketService extends Service {
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "Service onDestroy");
+
     }
 
 
@@ -78,6 +89,27 @@ public class SocketService extends Service {
     public void onTaskRemoved(Intent rootIntent) {
         super.onTaskRemoved(rootIntent);
         Log.d(TAG, "onTaskRemoved");
+
+
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
+        int[] appWidgetIds = appWidgetManager
+                .getAppWidgetIds(new ComponentName(this, TmlWidgetProvider.class));
+
+
+        // There may be multiple widgets active, so update all of them
+        for (int appWidgetId : appWidgetIds) {
+
+            // Construct the RemoteViews object
+            RemoteViews views = new RemoteViews(getPackageName(), R.layout.widget_detail_layout);
+
+
+            views.setTextViewText(R.id.widgetRoomName, "INACTIVE");
+            views.setTextViewText(R.id.widgetCount, "");
+
+            // Instruct the widget manager to update the widget
+            appWidgetManager.updateAppWidget(appWidgetId, views);
+
+        }
 
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
@@ -89,7 +121,6 @@ public class SocketService extends Service {
 
         // Send the leave
         mSocket.emit(Network.MESSAGE_LEAVE, new JSONObject());
-
 
         stopSelf();
     }

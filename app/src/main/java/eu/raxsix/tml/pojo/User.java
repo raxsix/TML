@@ -52,4 +52,13 @@ public class User implements Serializable {
 
         return getName();
     }
+
+    public String getDistance() {
+
+        if (distance != null){
+
+            return distance;
+        }
+        return "Not known";
+    }
 }

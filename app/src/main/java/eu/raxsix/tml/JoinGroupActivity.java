@@ -51,6 +51,7 @@ public class JoinGroupActivity extends AppCompatActivity {
     private ProgressDialog mDialog;
     private TextView mPasswordTextView;
     private TextView mFieldNameTextView;
+    private String mRoomName;
 
 
     @Override
@@ -66,7 +67,7 @@ public class JoinGroupActivity extends AppCompatActivity {
         Intent intent = getIntent();
         mRoomId = intent.getExtras().getString(AppConfig.EXTRA_ROOM_ID);
 
-        String mRoomName = intent.getExtras().getString(AppConfig.EXTRA_ROOM_NAME);
+        mRoomName = intent.getExtras().getString(AppConfig.EXTRA_ROOM_NAME);
 
         // Progress dialog
         mDialog = new ProgressDialog(this);
@@ -173,6 +174,7 @@ public class JoinGroupActivity extends AppCompatActivity {
                                     //mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     //mapIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     mapIntent.putExtra(AppConfig.EXTRA_USER_ID, userID);
+                                    mapIntent.putExtra(AppConfig.EXTRA_ROOM_NAME, mRoomName);
                                     startActivity(mapIntent);
                                 }
 
