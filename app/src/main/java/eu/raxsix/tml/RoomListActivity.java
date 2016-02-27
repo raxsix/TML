@@ -1,15 +1,16 @@
 
 package eu.raxsix.tml;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,14 +34,19 @@ import eu.raxsix.tml.network.Network;
 import eu.raxsix.tml.network.VolleySingleton;
 import eu.raxsix.tml.pojo.Room;
 
-public class RoomListActivity extends ListActivity {
+public class RoomListActivity extends AppCompatActivity {
 
     private static final String TAG = RoomListActivity.class.getSimpleName();
     private List<Room> mRoomList = new ArrayList<>();
+    private ListView mListView;
+    private TextView mEmptyList;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_list);
+
+        mListView = (ListView) findViewById(R.id.roomList);
+        mEmptyList = (TextView) findViewById(R.id.emptyList);
 
         requestRoomList();
 
@@ -104,7 +110,7 @@ public class RoomListActivity extends ListActivity {
 
                                 }
 
-                                setListAdapter(new ArrayAdapter<String[]>(
+                                mListView.setAdapter(new ArrayAdapter<String[]>(
                                         RoomListActivity.this,
                                         android.R.layout.simple_list_item_2,
                                         android.R.id.text1,
@@ -124,14 +130,31 @@ public class RoomListActivity extends ListActivity {
                                         TextView text1 = (TextView) view.findViewById(android.R.id.text1);
                                         TextView text2 = (TextView) view.findViewById(android.R.id.text2);
                                         text1.setText(entry[0]);
-                                        text2.setText(getString(R.string.joined) + " " + entry[1]);
+                                        text2.setText(getString(R.string.joined) + entry[1]);
                                         return view;
                                     }
 
 
                                 });
 
+                                mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                    @Override
+                                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                        Intent joinIntent = new Intent(RoomListActivity.this, JoinGroupActivity.class);
 
+                                        joinIntent.putExtra(AppConfig.EXTRA_ROOM_ID, mRoomList.get(position).getId());
+
+                                        joinIntent.putExtra(AppConfig.EXTRA_ROOM_NAME, mRoomList.get(position).getName());
+                                        startActivity(joinIntent);
+                                    }
+                                });
+
+                                if (roomList.isEmpty()) {
+
+                                    mEmptyList.setVisibility(View.VISIBLE);
+                                }else {
+                                    mEmptyList.setVisibility(View.GONE);
+                                }
                             }
 
                         } catch (JSONException e) {
@@ -151,18 +174,5 @@ public class RoomListActivity extends ListActivity {
         // Adding request to request queue
         VolleySingleton.getInstance().addToRequestQueue(request, get_list_data);
     }
-
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-
-        Intent joinIntent = new Intent(this, JoinGroupActivity.class);
-
-        joinIntent.putExtra(AppConfig.EXTRA_ROOM_ID, mRoomList.get(position).getId());
-
-        joinIntent.putExtra(AppConfig.EXTRA_ROOM_NAME, mRoomList.get(position).getName());
-        startActivity(joinIntent);
-    }
-
 }
 

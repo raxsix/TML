@@ -10,13 +10,13 @@
     tools:context=".RoomListActivity">
 
     <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@android:id/list"
+        android:id="@+id/roomList"
         android:layout_width="match_parent"
         android:contentDescription="@string/list"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@android:id/empty"
+        android:id="@+id/emptyList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/empty_list"

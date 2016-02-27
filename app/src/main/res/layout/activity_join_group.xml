@@ -1,50 +1,76 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/join_group_activity_margin_top"
-    android:orientation="vertical"
-    tools:context=".fragments.CreateGroupFragment">
+    android:fitsSystemWindows="true">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="GROUP NAME"
-        android:id="@+id/groupNameTitle"
-        android:contentDescription="@string/group_name"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
-        android:id="@+id/fieldName"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/join_group_edit_text_margin"
-        android:hint="@string/FieldName"
-        android:contentDescription="@string/FieldName"
-        android:inputType="textEmailAddress" />
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <EditText
-        android:id="@+id/joinPassword"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/join_group_edit_text_margin"
-        android:contentDescription="@string/password"
-        android:fontFamily="sans-serif"
-        android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    </android.support.design.widget.AppBarLayout>
 
-    <Button
-        android:id="@+id/buttonJoin"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_margin="@dimen/join_group_edit_text_margin"
-        android:layout_height="@dimen/join_group_button_height"
-        android:contentDescription="@string/join_group"
-        android:text="Join"
-        android:textSize="@dimen/join_group_button_sp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/join_group_activity_margin_top"
+        android:orientation="vertical"
+        tools:context=".fragments.CreateGroupFragment">
 
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/groupNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/group_name"
+            android:text="GROUP NAME"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/fieldName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/join_group_edit_text_margin"
+            android:contentDescription="@string/FieldName"
+            android:hint="@string/FieldName"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/joinPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/join_group_edit_text_margin"
+            android:contentDescription="@string/password"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+
+        <Button
+            android:id="@+id/buttonJoin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/join_group_button_height"
+            android:layout_margin="@dimen/join_group_edit_text_margin"
+            android:contentDescription="@string/join_group"
+            android:text="Join"
+            android:textSize="@dimen/join_group_button_sp" />
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
 

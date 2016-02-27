@@ -26,7 +26,7 @@
     <string name="list_refreshed">List refreshed</string>
     <string name="refresh_list">Refresh the list</string>
     <string name="action">Action</string>
-    <string name="joined">joined</string>
+    <string name="joined">joined </string>
     <string name="list">list</string>
     <string name="location_update_active">"Location update is active"</string>
     <string name="location_update_inactive">"Location update is inactive"</string>
