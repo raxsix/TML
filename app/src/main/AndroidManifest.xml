@@ -68,26 +68,5 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <provider
-            android:name=".database.TmlProvider"
-            android:authorities="eu.raxsix.tml" />
-
-        <service
-            android:name=".service.TmlIntentService"
-            android:exported="false"/>
-
-        <service
-            android:name=".service.TmlWidgetService"
-            android:exported="false"/>
-
-        <receiver android:name=".widget.TmlWidgetProvider" >
-            <intent-filter>
-                <action android:name="eu.raxsix.tml.ACTION_DATA_UPDATED" />
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
-                android:resource="@xml/widget_info" />
-        </receiver>
     </application>
 </manifest>
