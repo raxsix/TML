@@ -969,7 +969,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     } else {
                         arrayAdapter.add(user);
                     }
-
                 }
 
                 builderSingle.setNegativeButton(
